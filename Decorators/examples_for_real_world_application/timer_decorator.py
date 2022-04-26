@@ -16,7 +16,7 @@ def timer(func):
 
     return wrapper_timer
 
-
+"""
 # user function
 @timer
 def waste_some_time(num_times):
@@ -26,3 +26,4 @@ def waste_some_time(num_times):
 
 print(waste_some_time(1))
 print(waste_some_time(999))
+"""
