@@ -1,4 +1,4 @@
-# Python Decorator with the use of args in the function
+# Python Decorators with the use of args in the function
 
 
 def func(fun):
