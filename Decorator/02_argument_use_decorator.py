@@ -6,6 +6,7 @@ def func(fun):
         print("Starting")
         fun(*args, **kwargs)
         print("End")
+
     return wrapper
 
 
@@ -16,5 +17,3 @@ def f(name):
 
 # calling the function
 f("Subhranil Sarkar")
-
-

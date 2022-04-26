@@ -7,12 +7,14 @@ def func(fun):
         val = fun(*args, **kwargs)
         print("Ending...")
         return val
+
     return wrapper
 
 
 @func
 def add(x, y):
     return x + y
+
 
 # stroing the return value in a new variable
 result = add(5, 6)
