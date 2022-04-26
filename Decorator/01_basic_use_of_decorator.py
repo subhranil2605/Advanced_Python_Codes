@@ -1,10 +1,10 @@
 # Python Decorators 
 
 
-def func(func):
+def func(fun):
     def wrapper():
         print("Starting")
-        func()
+        fun()
         print("End")
     return wrapper
 

@@ -1,10 +1,10 @@
 # Python Decorator with the use of args in the function
 
 
-def func(func):
+def func(fun):
     def wrapper(*args, **kwargs):
         print("Starting")
-        func(*args, **kwargs)
+        fun(*args, **kwargs)
         print("End")
     return wrapper
 
