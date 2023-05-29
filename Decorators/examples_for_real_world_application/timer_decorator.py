@@ -16,14 +16,13 @@ def timer(func):
 
     return wrapper_timer
 
-"""
-# user function
-@timer
-def waste_some_time(num_times):
-    for _ in range(num_times):
-        sum([i ** 2 for i in range(10000)])
 
+if __name__ == "__main__":
+    # user function
+    @timer
+    def waste_some_time(num_times):
+        for _ in range(num_times):
+            sum([i**2 for i in range(10000)])
 
-print(waste_some_time(1))
-print(waste_some_time(999))
-"""
+    print(waste_some_time(1))
+    print(waste_some_time(999))

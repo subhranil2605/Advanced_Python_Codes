@@ -8,5 +8,4 @@ def my_add(a, b):
 
 
 numbers = [0, 1, 2, 5, 9]
-
 print(reduce(my_add, numbers, 100))
