@@ -1,6 +1,17 @@
-## ElectricPowerSwitch is dependent on LightBulb
+from abc import ABC, abstractmethod
 
-class LightBulb:
+
+class Switchable(ABC):
+    @abstractmethod
+    def turn_on(self):
+        pass
+
+    @abstractmethod
+    def turn_off(self):
+        pass
+
+
+class LightBulb(Switchable):
     def turn_on(self):
         print("LightBulb: turned on...")
 
@@ -9,16 +20,16 @@ class LightBulb:
 
 
 class ElectricPowerSwitch:
-    def __init__(self, l: LightBulb):
-        self.light_bulb = l
+    def __init__(self, c: Switchable):
+        self.client = c
         self.on: bool = False
 
     def press(self) -> None:
         if self.on:
-            self.light_bulb.turn_off()
+            self.client.turn_off()
             self.on = False
         else:
-            self.light_bulb.turn_on()
+            self.client.turn_on()
             self.on = True
 
 
